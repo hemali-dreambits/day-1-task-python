@@ -47,7 +47,11 @@ print(result)
 
 #In a park, there are a certain number of buffaloes and cranes. Take the total number of heads and legs as input from the user to calculate the number of buffaloes and cranes in the park.
 total_heads = 20
-total_legs = 50
-x = (total_legs - 2 * total_heads) // 2  
-y = total_heads - x
-print(x, y)
+total_legs = 51
+if total_legs % 2 != 0:
+    print("legs must be an even number.")
+else:
+    x = (total_legs - 2 * total_heads) // 2 
+    y = total_heads - x  
+    print(f"Buffaloes: {x}, Cranes: {y}")
+
