@@ -17,14 +17,10 @@ print(result)
 
 #Write a function in Python to check duplicate letters. It must accept a string, i.e., a sentence. The function should return True if the sentence has any word with duplicate letters, else return False.
 def letter(word):
-  words = word.split()
-  for i in words:
-    i = i.lower()
-    if len(i) != len(set(i)):
-      return True
-    return False
+    word = word.replace(" ", "").lower()  
+    return len(word) != len(set(word))  
 
-print(letter("hello")
+print(letter("abcd abcdef pqef")) 
 
 
 #Write a function in Python to parse a string such that it accepts a parameter- an encoded string. 
